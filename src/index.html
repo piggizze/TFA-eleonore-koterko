@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<html>
+<head>
+  <title>TFA</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <!-- Meta Partage -->
+  <!-- Favicon -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="styles/app.css">
+  <script src="scripts/app.js" defer></script>
+</head>
+<body>
+  <title>Scrolling Background</title>
+  <div id="orientation-message">
+    Pour une meilleure expérience, veuillez mettre votre smartphone à l'horizontal.
+  </div>
+  <div class="tooltip-container">
+    <span class="tooltip-target">i</span>
+    <div class="tooltip-bubble">Survole les éléments animer!</div>
+</div>
+  <div id="background"></div>
+  <button id="leftBtn">Left</button>
+  <button id="rightBtn">Right</button>
+
+  <div class="characters">
+    <div class="character" id="char1">
+      <img src="assets/images/billy1.png">
+    </div>
+    <div class="character" id="char2">
+      <img src="assets/images/billy2.png">
+    </div>
+    <div class="character" id="char3">
+      <img src="assets/images/billy3.png">
+    </div>
+  </div>
+  <div class="characters">
+    <div class="character" id="char4">
+      <img src="assets/images/billy1-2.png" alt="">
+    </div>
+    <div class="character" id="char5">
+      <img src="assets/images/billy2-2.png" alt="">
+    </div>
+    <div class="character" id="char6">
+      <img src="assets/images/billy3-3.png" alt="">
+    </div>
+  </div>
+  
+  <div class="portfolio">
+    <div class="grid-container">
+      <h2 class="portfolio__midtitle">Présentation</h2>
+      <p class="portfolio__presentation">
+        Salut ! Moi, c’est Billypig. Vous vous demandez sûrement qui je suis et bien, je représente la personnalité d’Éléonore. Je déborde d'énergie, de joie et de bien d’autres choses.
+        Parlons un peu d’elle maintenant. Elle a 21 ans et est en train de suivre un bachelier en Web Design Transmédia à la Haute École Albert Jacquard de Namur. Depuis toujours, elle adore toucher à tout, découvrir de nouvelles techniques et s'améliorer dans ses domaines de prédilection comme le dessin, le graphisme, le design.
+      </p>
+      
+      <h2 class="portfolio__midtitle">Mes compétences</h2>
+      <p class="portfolio__compet--one">
+        Je suis assez polyvalente, que ce soit pour la création de différents assets, 
+        fonds ou autres, la suite Adobe n'a plus de secret pour moi.
+      </p>
+      <p class="portfolio__compet--two">
+        Pour la partie prototypage, Figma est le logiciel que j'utilise par défaut afin de bien visualiser ce que j'aimerais réaliser. 
+      </p>
+      <p class="portfolio__compet--three">
+        Enfin, j'utilise quotidiennement les langages HTML/CSS/JS pour la réalisation de mes divers projets.
+      </p>
+    </div>
+    <div>
+       <!-- 
+        Méthode Bem
+        B = block > .qqch
+        E = element > .qqch__element
+        M = modifier > qqch--modifier
+     --> 
+<div class="projets">
+     <h2>Mes projets</h2>
+    <div class="slider">
+      <ul class="slider__controls grid">
+          <li class="slider__btn"><button class="btn__prev">Prev</button></li>
+          <li class="slider__btn"><button class="btn__next">Next</button></li>
+      </ul>
+      <ul class="slider__list">
+          <li class="slider__el slider__el--show grid">
+              <div class="slider__content">
+                  <h2 class="title">Helloworld</h2>
+                  <p>Le projet "HelloWorld” lance l'année. L'objectif ? Créer un site qui nous représente et qui aborde des articles sur des éléments du web.</p>
+              </div>
+              <img class="slider__img" src="assets/images/helloworld.png" alt="heloworld">
+          </li>
+          <li class="slider__el grid">
+              <div class="slider__content">
+                  <h2 class="title">Décembre</h2>
+                  <p>Décembre est notre projet de fin du premier quadrimestre. Celui-ci consistait à réaliser notre première landing page pour promouvoir un produit et le proposer à la vente.</p>
+              </div>
+              <img class="slider__img" src="assets/images/decembre.png" alt="decembre">
+
+          </li>
+          <li class="slider__el grid">
+              <div class="slider__content">
+                  <h2 class="title">Rethinking-UX</h2>
+                  <p>Ce projet est un réalisation collective en groupe de 4 personnes. L’objectif premier était d'améliorer notre local, lui redonner vie”.
+
+                    Nous avons donc réalisé des tableaux mémos afin d'égayer notre local grâce au diverses couleurs, mais également apporter une aide aux étudiants leur permettant d’avoir à disposition les éléments les plus oubliés ou les bonnes pratiques à utiliser.
+                    </p>
+              </div>
+              <img class="slider__img" src="assets/images/rething-ux.png" alt="rething-ux">
+
+          </li>
+          <li class="slider__el grid">
+              <div class="slider__content">
+                  <h2 class="title">Dataplay</h2>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque, sed quo doloribus modi maiores aperiam qui facere veritatis assumenda adipisci minima dignissimos omnis! Laboriosam ab a dolorum corrupti quo aliquam.</p>
+              </div>
+              <img class="slider__img" src="assets/images/dataplay.png" alt="dataplay">
+
+          </li>
+      </ul>
+  </div>
+
+  <a class="link" href="stages.html">Stages</a>
+</div>
+  <footer class="footer">
+    <a href="#link1" class="footer__link">DWT</a>
+    <a href="#link2" class="footer__link">Eléonore - Koterko</a>
+    <a href="#link3" class="footer__link">Vidéo</a>
+</footer>
+    
+  
+</body>
+</html>

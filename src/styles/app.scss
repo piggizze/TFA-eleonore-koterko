@@ -1,0 +1,270 @@
+@import 'utils/variables';
+@import 'components/type';
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lobster&display=swap');
+
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#orientation-message {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+}
+
+@media screen and (orientation: portrait) {
+    #orientation-message {
+        display: flex;
+    }
+}
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+  
+  .tooltip-target {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .tooltip-bubble {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+   
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip-container:hover .tooltip-bubble {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+  #background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: 370%;
+    background-image: url('../assets/images/panorama-tfa.jpg');
+    background-repeat: repeat-x;
+    z-index: -20;
+}
+.characters {
+    display: flex;
+    justify-content: center;
+    
+   
+}
+
+.character {
+    display: none;
+    width: 100px; 
+    height: 30px; 
+    background-size: cover;
+    z-index: 2;
+    margin-top: 30px;
+    
+}
+
+  
+.visible {
+    display: block ;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 36px;
+    padding: 36px;
+}
+.projets{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 36px;
+    padding: 36px;
+}
+    h1{
+        font-size:  51px;
+    }
+    h2{
+        font-size:36px ;
+        font-family: 'lobster';
+    }
+    p{
+        font-size: 18px;
+        font-family: 'cabin';
+    }
+    .portfolio{
+        position: absolute;
+        top: 70vh;
+    }
+    @media (max-width: 1024px) {
+        .slider{
+            display: none;
+        }
+    }
+    @media (max-width: 1024px) and (min-width: 769px) {
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 36px;
+            padding: 36px;
+    }
+        h1{
+            font-size: 57px;
+        }
+        h2{
+            font-size: 40px;
+        }
+        p{
+            font-size: 20px;
+        }
+        .character {
+            display: none;
+            z-index: 2;
+            margin-top: 90px;
+        }
+    }
+    @media (min-width: 1024px) {
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            gap: 22px;
+            padding: 62px;
+    }
+    
+    .portfolio{
+        top: 100vh;
+    }
+    #leftBtn{
+        display: none;
+    }
+    #rightBtn{
+        display: none;
+    }
+p{
+    font-size: 22px;
+    /*width: 45ch;*/
+    font-family: "cabin";
+}
+h1{
+    font-size: 62px;
+    font-family: "lobster";
+}
+h2{
+    font-size: 44px;
+    font-family: "lobster";
+}
+
+.slider{
+    width: 100%;
+    max-width: 1500px;  
+    margin: 100px auto 0;
+    position: relative;
+  }
+  .slider__el{
+    /* 
+    Les Ã©lÃ©ments se retirent du flux 
+    top right bottom left
+    > position par rapport au viewport
+    donner une position Ã  un des parents pour pas que ce soit positionnÃ© //viewport
+    > position : relative sur un des parents > ici .slider
+    */
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .slider__img{
+    grid-column: 3 / -1;
+    grid-row:  1 / 4;
+    max-width: 100%;
+    align-self: center;
+  }
+  .slider__btn{
+    cursor: pointer;
+    grid-column: 6;
+    grid-row: 4;
+    z-index: 15;
+  }
+  .slider__btn:last-child{
+    grid-row: 3;
+    justify-content: center;
+    align-self: end;
+  }
+  .slider__liste, .slider__controls{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 150px);
+    column-gap: 6%;
+    row-gap: 2%;
+  }
+  .slider__content{
+    grid-column: 1 / 4;
+    grid-row: 2 / 5;
+    background-color: rgb(248, 215, 175);
+    padding: 20px;
+    z-index: 10;
+  }
+  
+  /* animation (on peut les ajouter directement dans les class de base, pas en sÃ©parÃ©)*/
+  .slider__el .slider__content{
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transform: translateX(50px);
+    /* easing.net */
+    transition: .3s ease-out;
+  }
+  .slider__el .slider__img{
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+        /* easing.net */
+    transform: translateX(-50px);
+    transition: .3s ease-out;
+  }
+  .slider__el--show .slider__content,
+  .slider__el--show .slider__img{
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+    }
