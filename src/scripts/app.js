@@ -1,7 +1,4 @@
 "use strict"
-
-"use strict"
-
 function checkOrientation() {
     if (window.innerHeight > window.innerWidth) {
         document.getElementById('orientation-message').style.display = 'flex';
@@ -96,45 +93,6 @@ document.addEventListener('keydown', function(event) {
 
 //slider
 
-"use strict";
-let prevButton = document.querySelector(".btn__prev");
-let nextButton = document.querySelector(".btn__next");
 
-prevButton.addEventListener("click", prevSlide);
-nextButton.addEventListener("click", nextSlide);
-
-//pour faire une navigation au clavier
-document.addEventListener("keydown", keyboardListener);
-
-function keyboardListener(event){
-    if(event.code == "ArrowLeft"){
-        prevSlide();
-    } else if(event.code == "ArrowRight"){
-        nextSlide();
-    }
-}
-
-function prevSlide(){
-    let activeSlideEl = document.querySelector(".slider__el--show");
-    let prevSlideEl =  activeSlideEl.previousElementSibling;
-    // Si prevSlideEl est vide on va appliquer la boucle
-    if(!prevSlideEl){
-        // on remonte sur le parent et on va chercher le dernier enfant > ici le dernier li
-        prevSlideEl = activeSlideEl.parentNode.lastElementChild;
-    }
-    //ne pas mettre de point > (".slider__el--show") sinon ça rajoute le point dans le nom de classe html et ça ne fonctionne pas 
-    activeSlideEl.classList.remove("slider__el--show");
-    prevSlideEl.classList.add("slider__el--show");
-}
-
-function nextSlide(){
-    let activeSlideEl = document.querySelector(".slider__el--show");
-    let nextSlideEl =  activeSlideEl.nextElementSibling;
-    if(!nextSlideEl){
-        nextSlideEl = activeSlideEl.parentNode.firstElementChild;
-    }
-    activeSlideEl.classList.remove("slider__el--show");
-    nextSlideEl.classList.add("slider__el--show");
-}
 
 

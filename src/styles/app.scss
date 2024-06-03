@@ -10,6 +10,23 @@ body {
     padding: 0;
 }
 
+li{
+    list-style: none;
+}
+
+#leftBtn{
+    position: absolute;
+    top:20vh ;
+    left: 10px;
+}
+#rightBtn{
+    position: absolute;
+    top:20vh ;
+    right: 10px;
+}
+.portfolio__littletitle{
+    grid-column: 1;
+}
 #orientation-message {
     display: none;
     position: absolute;
@@ -93,7 +110,7 @@ body {
     height: 30px; 
     background-size: cover;
     z-index: 2;
-    margin-top: 30px;
+    margin-top: 100px;
     
 }
 
@@ -108,6 +125,9 @@ body {
     gap: 36px;
     padding: 36px;
 }
+.image__projet{
+    display: none;
+}
 .projets{
     display: grid;
     grid-template-columns: repeat(1,1fr);
@@ -120,6 +140,10 @@ body {
     h2{
         font-size:36px ;
         font-family: 'lobster';
+    }
+    h3{
+        font-family: 'lobster';
+        font-size: 25px;
     }
     p{
         font-size: 18px;
@@ -163,7 +187,15 @@ body {
             gap: 22px;
             padding: 62px;
     }
-    
+    .portfolio__compet{
+        grid-column: 2/6;
+      }
+      .portfolio__midtitle{
+        grid-column: 2/5;
+      }
+      .portfolio__presentation{
+        grid-column: 2/7;
+      }
     .portfolio{
         top: 100vh;
     }
@@ -186,85 +218,14 @@ h2{
     font-size: 44px;
     font-family: "lobster";
 }
-
-.slider{
-    width: 100%;
-    max-width: 1500px;  
-    margin: 100px auto 0;
-    position: relative;
-  }
-  .slider__el{
-    /* 
-    Les Ã©lÃ©ments se retirent du flux 
-    top right bottom left
-    > position par rapport au viewport
-    donner une position Ã  un des parents pour pas que ce soit positionnÃ© //viewport
-    > position : relative sur un des parents > ici .slider
-    */
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .slider__img{
-    grid-column: 3 / -1;
-    grid-row:  1 / 4;
-    max-width: 100%;
-    align-self: center;
-  }
-  .slider__btn{
-    cursor: pointer;
-    grid-column: 6;
-    grid-row: 4;
-    z-index: 15;
-  }
-  .slider__btn:last-child{
-    grid-row: 3;
-    justify-content: center;
-    align-self: end;
-  }
-  .slider__liste, .slider__controls{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .grid{
+.image__projet{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 150px);
-    column-gap: 6%;
-    row-gap: 2%;
-  }
-  .slider__content{
-    grid-column: 1 / 4;
-    grid-row: 2 / 5;
-    background-color: rgb(248, 215, 175);
-    padding: 20px;
-    z-index: 10;
-  }
-  
-  /* animation (on peut les ajouter directement dans les class de base, pas en sÃ©parÃ©)*/
-  .slider__el .slider__content{
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-    transform: translateX(50px);
-    /* easing.net */
-    transition: .3s ease-out;
-  }
-  .slider__el .slider__img{
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-        /* easing.net */
-    transform: translateX(-50px);
-    transition: .3s ease-out;
-  }
-  .slider__el--show .slider__content,
-  .slider__el--show .slider__img{
-    opacity: 1;
-    pointer-events: all;
-    visibility: visible;
-    transform: translateX(0);
-  }
+    grid-column: 7/10;
+    width: 50%;
+}
+.portfolio__littletitle{
+    grid-column: 2/4;
+
+}
 
     }
