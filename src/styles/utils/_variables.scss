@@ -1,4 +1,48 @@
 .billy{
-    width: 50%;
+    width: 70%;
 }
+
 /*100% deskostop*/
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    outline: none;
+}
+button svg{
+    border-radius: 20px;
+   background-color: wheat;
+    stroke: rgb(5, 4, 4);
+}
+
+
+#movable-image {
+    position: absolute;
+    top: 55%;
+    left: 570px; /* Position de départ */
+    width: 40%;
+    }
+
+    #movable-image {
+        
+        animation: zoomInOut 3s infinite ease-in-out; /* Animation en boucle */
+    }
+    
+    @keyframes zoomInOut {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1); /* Taille agrandie */
+        }
+    }
+
+    #mov-image {
+        position: absolute;
+        top: 0%;
+        left: 570px; /* Position de départ */
+        width: 40%;
+        display: none;
+        }

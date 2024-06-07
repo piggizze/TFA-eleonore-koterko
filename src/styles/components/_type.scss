@@ -1,39 +1,195 @@
-.link{
+.navBtn{
+  position: absolute;
+  right: 150px;
   display: inline-block;
   text-align: center;
   text-decoration: none;
   padding: 5px;
   border: 2px solid;
-  border-color: bisque;
+  border-color: rgb(14, 223, 14);
   width: 10%;
+  color: #000;
 
 }
-.link:hover{
+.navBtn:hover{
   color: aquamarine;
 }
 .portfolio__midtitle{
   grid-column: 1;
+  z-index: 10;
+  margin-bottom: 0px;
 }
 .portfolio__presentation{
   grid-column: 1;
 }
 .portfolio__compet{
   grid-column: 1;
+  z-index: 10;
 }
 
 .footer {
-  background-color: #000;
+  position: relative;
+  margin-bottom: 0px;
+  margin-top: 60px;
+  background-color: #363434;
   padding: 20px;
   text-align: center;
 }
 
 .footer__link {
+  cursor: pointer;
   color: #fff;
   margin: 0 15px;
   text-decoration: none;
   font-size: 16px;
+  
 }
 
 .footer__link:hover {
   text-decoration: underline;
+}
+
+
+.info-bubble {
+  position: absolute;
+  top: 65%;
+  left: 65%;
+  transform: translateX(-50%);
+  background-color: #555;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+  line-height: 30px;
+}
+
+.image-wrapper:hover .info-bubble {
+  opacity: 1;
+  visibility: visible;
+}
+.info-bubble{
+  font-family: 'cabin';
+}
+a{
+  font-family: 'cabin';
+  color: #fff;
+
+}
+a:hover{
+  color: #fa9bf2;
+}
+.portfolio__compet--link{
+  color: #000;
+  font-family: 'cabin';
+}
+/*.portfolio{
+  background-image: url('../assets/images/fond1.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/*sliderrrrrrrrrrrrrrrrrrrrrrrrrr*/
+
+.slider{
+  width: 80%;
+  max-width: 1200px;  
+  margin-top: 50px;
+  margin-left: 180px;
+  position: relative;
+}
+.slider__el{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.slider__img{
+  position: relative;
+  margin-left: 400px;
+  width: 50%;
+  align-self: center;
+}
+
+li{
+  list-style: none;
+}
+.slider__liste, .slider__controls{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.slider__content{
+  position: relative;
+  background-color: rgb(248, 215, 175);
+  width: 50%;
+  padding: 50px;
+  padding-top: 10px;
+  z-index: 10;
+}
+
+/* animation (on peut les ajouter directement dans les class de base, pas en séparé)*/
+.slider__el .slider__content{
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transform: translateX(50px);
+  /* easing.net */
+  transition: .3s ease-out;
+}
+.slider__el .slider__img{
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+      /* easing.net */
+  transform: translateX(-50px);
+  transition: .3s ease-out;
+}
+.slider__el--show .slider__content,
+.slider__el--show .slider__img{
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+  transform: translateX(0);
+}
+.btn__prev{
+  position: relative;
+  left: 50px;
+  margin-top: 35%;
+  z-index: 15;
+  font-family: 'cabin';
+  background-color: #fa9bf2;
+  padding: 10px;
+  border-radius:20px ;
+}
+
+.btn__next{
+  position: relative;
+  left: 55px;
+  margin-top: 10px;
+  margin-bottom: 20%;
+  z-index: 15;
+  font-family: 'cabin';
+  background-color: #fa9bf2;
+  padding: 10px;
+  border-radius:20px ;
+}
+.btn__prev:hover{
+  background-color: aqua;
+}
+////////////////////////////////////
+.portfolio{
+  background-color: #ffdbdb;
+}
+//////////////////////
+//
+
+.parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transform: translateY(0);
+  transition: transform 0.1s ease-out;
 }
